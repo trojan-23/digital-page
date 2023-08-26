@@ -1,56 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Digital Farewell</title>
-    <link rel="stylesheet" href="./digital_farewell.css" />
-  </head>
-  <body>
-    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Generator</title>
+    <link rel="stylesheet" href="./digital_farewell.css">
+</head>
+<body>
     <div id="card">
-      <div id="top-section">
-        <h2>Code of Memories: A Farewell Tribute to my mentor</h2>
-        <h4>I made this to express my incredible journey of learning under your guidance,</h4>
-        <p>
-          In the world of binary possibilities, you've taught me to code my dreams into reality. Here's to debugging challenges, compiling success, and forever embracing the algorithm of curiosity. Happy trails, Nazim Sir!
-        </p>
-      </div>
-      <div id="bottom-section">
-        <div id="bottom-left-section">
-          <h4>Your legacy</h4>
-          <div id="price-container">
-            <div id="price"></div>
-          </div>
-          <p>As I bid you farewell, Nazim Sir, please know that your legacy lives on in the lines of code I write, the challenges I conquer, and the ever-curious mind you've cultivated. I promise to carry the torch of your teachings as I step into the exciting yet challenging realm of professional computer science.</p>
-          <button onclick="sayGoodbye()">Good Bye !</button>
-          <p id="goodbye-message"></p>
-        </div><div id="bottom-right-section">
-          <h4>Why you have special place</h4>
-          <ul>
-            <li>You were always approachable.</li>
-            <li>You always made me learn from mistakes.</li>
-            <li>You always believed in me even when I could'nt</li>
-            <li>You knew when to be hard on students.</li>
-            <li>My name means "light of knowledge" but God made you the source of it.</li>
-            <li>Your lectures were like coding spell to me.</li>
-            <li>Only few teachers are able to get a special place in a student's heart, you are that teacher for me Nazim sir.</li>
-          </ul>
+        <div id="top-section">
+            <h2>Prime Number Generator</h2>
+            <h4>Input the upper and lower range as positive integers:</h4>
+            <div id="upper">
+                <form action="" id="upper_range">
+                    Upper bound:
+                    <input type="number" id="upperNumber" min="2" required>
+                </form>
+            </div>
+            <div id="lower">
+                <form action="" id="lower_range">
+                    Lower bound:
+                    <input type="number" id="lowerNumber" min="2" required>
+                </form>
+            </div>
+            <button onclick="generatePrimes()">Generate Prime Numbers</button>
+            <button onclick="savePrimeList()">Save primeList</button>
+            <p id="primeNumbers"></p>
         </div>
-      </div>
+        <div id="bottom-section">
+            <div id="bottom-right-section">
+                <h4>Output:</h4>
+                <div id="price-container">
+                    <div id="price"></div>
+                </div>
+                <p id="goodbye-message"></p>
+            </div>
+            <div id="bottom-right-section">
+              <ul id="primeList"></ul>
+            </div>
+        </div>
     </div>
-    <script>
-      function sayGoodbye() {
-  const goodbyeMessage = "Wishing you all the best in your new journey. Farewell!";
-  const confirmation = confirm(goodbyeMessage);
-  
-  if (confirmation) {
-    console.log("User confirmed farewell.");
-  } else {
-    console.log("User canceled farewell.");
-  }
-}
-    </script>
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>
