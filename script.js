@@ -1,6 +1,6 @@
 function generatePrimes() {
-    const lower = parseInt(document.getElementById("lowerNumber").value);
-    const upper = parseInt(document.getElementById("upperNumber").value);
+    const lower = parseInt(BigInt(document.getElementById("lowerNumber").value));
+    const upper = parseInt(BigInt(document.getElementById("upperNumber").value));
     
     if (isNaN(lower) || isNaN(upper)) {
         alert("Please enter valid numbers.");
